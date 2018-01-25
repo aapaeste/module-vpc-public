@@ -56,6 +56,12 @@ To SSH into any of your EC2 Instances in a private subnet, we recommend launchin
 an SSH jump host. For more info, see the [Bastion Host
 examples](https://github.com/gruntwork-io/module-server-public/tree/master/examples/bastion-host).
 
+## Gotchas
+
+## Gotchas
+
+- If the `num_availability_zones` variable in the mgmt VPC and the `num_availability_zones` variable in the app VPC don't match, there are problems with the routes that are created between the two VPCs as part of setting up VPC Peering. If your use case requires different numbers of Availability Zones for each of these VPCs, please let us know and we'll investigate further!
+
 ## Other VPC Core Concepts
 
 Learn about [Other VPC Core Concepts](../_docs/vpc-core-concepts.md) like subnets, NAT Gateways, and VPC Endpoints.

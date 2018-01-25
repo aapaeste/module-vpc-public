@@ -55,6 +55,10 @@ To summarize:
 - Philosophically, everything in a VPC should be isolated from all resources in any other VPC. In particular, we want
   to ensure that our stage environment is completely independent from prod. This architecture helps to reinforce that.
 
+## Gotchas
+
+- If the `num_availability_zones` variable in the mgmt VPC and the `num_availability_zones` variable in the app VPC don't match, there are problems with the routes that are created between the two VPCs as part of setting up VPC Peering. If your use case requires different numbers of Availability Zones for each of these VPCs, please let us know and we'll investigate further!
+
 ## Other VPC Core Concepts
 
 Learn about [Other VPC Core Concepts](../_docs/vpc-core-concepts.md) like subnets, NAT Gateways, and VPC Endpoints.

@@ -48,8 +48,8 @@ which can be assigned to resources in the VPC.
 
 ### Subnets
 
-Subnets are "sub-networks", or a partition of the VPC. For example, a VPC might have the CIDR range `10.0.50.0/24`
-(`10.0.15.0` - `10.0.15.255`) and a subnet might allow just IP addresses in the range `10.0.50.0/28` (`10.0.15.0` -
+Subnets are "sub-networks", or a partition of the VPC. For example, a VPC might have the CIDR range `10.0.15.0/24`
+(`10.0.15.0` - `10.0.15.255`) and a subnet might allow just IP addresses in the range `10.0.15.0/28` (`10.0.15.0` -
 `10.0.15.16`). Note that subnets cannot have overlapping CIDR Ranges.
 
 In addition, each subnet can have a unique Route Table.
